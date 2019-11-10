@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.3in]{geometry}
+\usepackage{xeCJK}
+\setmonofont{SourceCodePro-Regular}
+\setCJKmainfont[BoldFont=FandolSong-Bold,ItalicFont=FandolKai-Regular]{FandolSong-Regular}
+\setCJKsansfont[BoldFont=FandolHei-Bold]{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath,amscd,amsbsy,amssymb,latexsym,url,bm,amsthm}
+\usepackage{tikz}
+\usetikzlibrary{automata,arrows}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{pifont}
+\usepackage{color}
+\usepackage{changepage}
+\usepackage{diagbox}
+\usepackage{placeins}
+\usepackage{dcolumn}
+\usepackage{listings}
+\usepackage{fontspec}
+
+\newtheorem{problem}{Problem}[]
+\newtheorem*{solution}{Solution}
+\makeatletter \renewenvironment{proof}[1][Proof] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+\makeatletter \renewenvironment{solution}[1][Solution] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+
+\begin{document}
+  \title{\textbf{_TITLE_}}
+    \author{_AUTHOR_NAME_\\
+      _STUDENT_ID_}
+    \maketitle
+
+    \begin{problem}[_ORIGINAL_NUMBER_]
+    
+      _TYPE_TEXT_HERE_            %  \textcolor{ _COLOR_ }{ _TYPE_TEXT_HERE_ }
+      
+      \lstset{                    % Add code.
+        language=C, 
+        basicstyle=\fontspec{Consolas}}   
+      \begin{lstlisting}
+         _TYPE_CODE_HERE_
+      \end{lstlisting}
+      
+      \begin{tabular}{|l|c|r|}    & Add table.
+        \hline  
+        A&B%C\\
+        \hline 
+      \end{tabular}
+      
+      \[A+B=C\]                   % Add simple formula.
+        
+      \[                          % Add complex formula.
+        \begin{split}
+        \text{A}=&~B_{C}\\
+        &+D^{E}\times \sqrt{F} \\
+        &+\frac{G}{H} \\
+        \approx &I
+        \end{split}
+      \]
+      
+      \begin{tabular}{cD{.}{.}{3}}% Another way.
+         &A\\
+        +&B\\
+        \hline
+         &C\\
+      \end{tabular}
+      
+      \begin{enumerate}[a.]
+        \item _TYPE_YEXT_HERE_
+        \item _TYPE_TEXT_HERE_
+        
+      \end{enumerate}
+    \end{problem}
+    
+    \begin{solution}
+    \end{solution}
+\end{document}
