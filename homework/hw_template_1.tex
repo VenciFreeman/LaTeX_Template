@@ -28,27 +28,32 @@
 \makeatletter \renewenvironment{solution}[1][Solution] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
 
 \begin{document}
-  \title{\textbf{_TITLE_}}
-    \author{_AUTHOR_NAME_\\
-      _STUDENT_ID_}
+  \title{\textbf{<TITLE>}}
+    \author{<AUTHOR NAME>\\<STUDENT ID>}
     \maketitle
 
-    \begin{problem}[_ORIGINAL_NUMBER_]
-    
-      _TYPE_TEXT_HERE_            %  \textcolor{ _COLOR_ }{ _TYPE_TEXT_HERE_ }
-      
+    \begin{problem}[x.x]
+      <insert text here>            %  \textcolor{ _COLOR_ }{ _TYPE_TEXT_HERE_ }
       \lstset{                    % Add code.
         language=C, 
-        basicstyle=\fontspec{Consolas}}   
-      \begin{lstlisting}
-         _TYPE_CODE_HERE_
-      \end{lstlisting}
-      
-      \begin{tabular}{|l|c|r|}    & Add table.
-        \hline  
-        A&B%C\\
-        \hline 
-      \end{tabular}
+        basicstyle=\fontspec{Consolas}}
+        \begin{lstlisting}
+          <insert code here> 
+        \end{lstlisting}
+
+      \begin{table}[ht]
+      \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+        \centering
+        \begin{tabular}{|l|c|r|}
+          \hline  
+          \tabincell{c}{A1\\A2\\A3} &
+          \tabincell{c}{B1\\B2} &
+          C \\
+          \hline 
+          A&B&C\\
+          \hline 
+        \end{tabular}
+      \end{table}
       
       \[A+B=C\]                   % Add simple formula.
         
@@ -67,14 +72,12 @@
         \hline
          &C\\
       \end{tabular}
-      
-      \begin{enumerate}[a.]
-        \item _TYPE_YEXT_HERE_
-        \item _TYPE_TEXT_HERE_
-        
-      \end{enumerate}
     \end{problem}
     
     \begin{solution}
+      \begin{enumerate}[a.]
+        \item <insert text here> 
+        \item <insert text here> s
+      \end{enumerate}
     \end{solution}
 \end{document}
